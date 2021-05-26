@@ -1,0 +1,204 @@
+/* --VARIABLES-- */
+
+:root {
+  --bright_orange: hsl(31, 77%, 52%);
+  --dark_cyan: hsl(184, 100%, 22%);
+  --very_dark_cyan: hsl(179, 100%, 13%);
+  --transparent_white: hsla(0, 0%, 100%, 0.75);
+  --very_light_gray: hsl(0, 0%, 95%);
+  --attribution_color: hsl(228, 45%, 44%);
+  --Lexend_deca: 'Lexend Deca', sans-serif;
+  --Big_shoulders: 'Big Shoulders Display', cursive;
+}
+
+/* --CLEARFIX-- */
+
+.group:before,
+.group:after {
+    content: " "; 
+    display: table; 
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    *zoom: 1;
+}
+
+
+/* --GENERAL CSS */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--very_light_gray);
+  font-size: 1.5rem;
+  font-family: var(--Lexend_deca);
+  min-height: 100vh;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --MAIN CONTENT CSS-- */
+
+main {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_container {
+  display: flex;
+  max-width: 925px;
+}
+
+section {
+  padding: 6rem 5.3rem;
+}
+
+.sedans {
+  background-color: var(--bright_orange);
+  border-radius: .8rem 0 0 .8rem;
+}
+
+.suvs {
+  background-color: var(--dark_cyan);
+}
+
+.luxury {
+  background-color: var(--very_dark_cyan);
+  border-radius: 0 .8rem .8rem 0;
+}
+
+img {
+  width: 5rem;
+  height: auto;
+}
+
+h1 {
+  color: var(--very_light_gray);
+  font-family: var(--Big_shoulders);
+  font-size: 3.3rem;
+  line-height: 4.5rem;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--transparent_white);
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 10rem;
+}
+
+.btn {
+  background-color: var(--very_light_gray);
+  display: inline-block;
+  border: 2px solid var(--very_light_gray);
+  border-radius: 2.25rem; /* 43px element height 43px/10px(for rem)/2 */
+}
+
+section a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.3rem 3rem;
+}
+
+.btn_sedans a {
+  color: var(--bright_orange);
+}
+
+.btn_sedans a:hover,
+.btn_sedans a:focus {
+  border-radius: 2.25rem; /* 43px element height 43px/10px(for rem)/2 */
+  background-color: var(--bright_orange);
+  color: var(--very_light_gray);
+}
+
+.btn_suvs a {
+  color: var(--dark_cyan);
+}
+
+.btn_suvs a:hover,
+.btn_suvs a:focus {
+  border-radius: 2.25rem; /* 43px element height 43px/10px(for rem)/2 */
+  background-color: var(--dark_cyan);
+  color: var(--very_light_gray);
+}
+
+.btn_luxury a {
+  color: var(--very_dark_cyan);
+}
+
+.btn_luxury a:hover,
+.btn_luxury a:focus {
+  border-radius: 2.25rem; /* 43px element height 43px/10px(for rem)/2 */
+  background-color: var(--very_dark_cyan);
+  color: var(--very_light_gray);
+}
+
+/* --FOOTER CSS-- */
+
+footer {
+  margin: 5rem auto 5rem auto;
+}
+
+.attribution { 
+  font-size: 1.3rem; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: var(--attribution_color); 
+}
+
+/* --MEDIA QUERIES-- */
+
+@media (max-width: 980px) {
+  
+  .main_container {
+    display: block; 
+    max-width: 350px;
+    margin-top: 6rem;
+  }
+
+  section {
+    padding: 4.5rem 4rem;
+  }
+
+  .sedans {
+    border-radius: .8rem .8rem 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 .8rem .8rem;
+  }
+
+  p {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .main_container {
+    max-width: 300px;
+  }
+
+  .attribution {
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+}
